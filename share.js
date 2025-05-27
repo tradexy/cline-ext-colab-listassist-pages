@@ -71,10 +71,6 @@ class ShareApp {
       
       this.listData = decodedData;
       
-      // DEBUG INFO
-      document.getElementById('debug-raw-hash').textContent = hash;
-      document.getElementById('debug-decoded-data').textContent = JSON.stringify(decodedData, null, 2);
-      // END DEBUG INFO
 
       // Apply theme if specified
       if (decodedData.theme) {

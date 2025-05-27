@@ -229,7 +229,6 @@ body {
   padding: var(--spacing-2xl);
   border-radius: var(--border-radius-xl);
   position: relative;
-  overflow: hidden;
 }
 
 .list-header::before {
@@ -268,8 +267,6 @@ body {
   margin-bottom: var(--spacing-xl);
   line-height: 1.5;
   white-space: pre-wrap; /* Preserve whitespace and line breaks */
-  background-color: yellow; /* TEMPORARY: For debugging visibility */
-  padding: 5px; /* TEMPORARY: To make background visible */
 }
 
 .list-stats {
