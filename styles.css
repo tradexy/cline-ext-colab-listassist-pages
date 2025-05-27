@@ -262,6 +262,16 @@ body {
   line-height: 1.4;
 }
 
+.list-description {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.5;
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  background-color: yellow; /* TEMPORARY: For debugging visibility */
+  padding: 5px; /* TEMPORARY: To make background visible */
+}
+
 .list-stats {
   display: flex;
   gap: var(--spacing-xl);

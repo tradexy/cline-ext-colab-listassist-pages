@@ -71,6 +71,11 @@ class ShareApp {
       
       this.listData = decodedData;
       
+      // DEBUG INFO
+      document.getElementById('debug-raw-hash').textContent = hash;
+      document.getElementById('debug-decoded-data').textContent = JSON.stringify(decodedData, null, 2);
+      // END DEBUG INFO
+
       // Apply theme if specified
       if (decodedData.theme) {
         this.applyTheme(decodedData.theme);
@@ -141,6 +146,11 @@ class ShareApp {
     // Hide subtitle if empty
     const subtitleElement = document.getElementById('list-subtitle');
     subtitleElement.style.display = this.listData.subtitle ? 'block' : 'none';
+
+    // Display description
+    const descriptionElement = document.getElementById('list-description');
+    descriptionElement.textContent = this.listData.metadata?.description || '';
+    descriptionElement.style.display = this.listData.metadata?.description ? 'block' : 'none';
   }
 
   renderStats() {
