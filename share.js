@@ -145,6 +145,7 @@ class ShareApp {
 
     // Display description
     const descriptionElement = document.getElementById('list-description');
+    console.log('[ShareApp] renderHeader: this.listData.metadata?.description:', this.listData.metadata?.description);
     descriptionElement.textContent = this.listData.metadata?.description || '';
     descriptionElement.style.display = this.listData.metadata?.description ? 'block' : 'none';
   }
