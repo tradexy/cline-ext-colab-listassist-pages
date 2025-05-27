@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new ShareApp();
 });
 
-// Handle browser back/forward navigation
+// Handle browser back and forward navigation
 window.addEventListener('hashchange', () => {
   location.reload();
 });
