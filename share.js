@@ -311,7 +311,7 @@ class ShareApp {
 
   openExtensionStore() {
     // Open Chrome Web Store (when published)
-    window.open('https://github.com/tradexy/cline-listassist', '_blank');
+    window.open('https://github.com/tradexy/cline-ext-colab-listassist', '_blank');
   }
 
   showShareModal() {
