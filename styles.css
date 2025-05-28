@@ -267,7 +267,8 @@ body {
   margin-bottom: var(--spacing-xl);
   line-height: 1.5;
   white-space: pre-wrap; /* Preserve whitespace and line breaks */
-  display: block !important; /* Force display to ensure visibility */
+  display: block; /* Ensure it's a block element */
+  /* Removed temporary debugging styles */
 }
 
 .list-stats {
