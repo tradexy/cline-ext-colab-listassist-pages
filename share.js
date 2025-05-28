@@ -143,10 +143,27 @@ class ShareApp {
     const subtitleElement = document.getElementById('list-subtitle');
     subtitleElement.style.display = this.listData.subtitle ? 'block' : 'none';
 
-    // Display description
+    // Display description - check multiple possible locations for description
     const descriptionElement = document.getElementById('list-description');
-    descriptionElement.textContent = this.listData.metadata?.description || '';
-    descriptionElement.style.display = this.listData.metadata?.description ? 'block' : 'none';
+    let description = '';
+    
+    // Check various possible locations for the description
+    if (this.listData.metadata && this.listData.metadata.description) {
+      description = this.listData.metadata.description;
+    } else if (this.listData.description) {
+      description = this.listData.description;
+    }
+    
+    // Debug logging to help troubleshoot
+    console.log('Description data check:', {
+      'metadata.description': this.listData.metadata?.description,
+      'direct description': this.listData.description,
+      'final description': description,
+      'full listData': this.listData
+    });
+    
+    descriptionElement.textContent = description;
+    descriptionElement.style.display = description ? 'block' : 'none';
   }
 
   renderStats() {

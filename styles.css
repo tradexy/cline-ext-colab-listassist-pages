@@ -263,12 +263,23 @@ body {
 
 .list-description {
   font-size: 1rem;
-  color: var(--color-text);
+  color: var(--color-text-secondary);
   margin-bottom: var(--spacing-xl);
-  line-height: 1.5;
+  line-height: 1.6;
   white-space: pre-wrap; /* Preserve whitespace and line breaks */
-  display: block; /* Ensure it's a block element */
-  /* Removed temporary debugging styles */
+  display: block !important; /* Ensure it's always visible when content exists */
+  padding: var(--spacing-md);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--color-primary);
+  font-style: italic;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.list-description:empty {
+  display: none !important;
 }
 
 .list-stats {
